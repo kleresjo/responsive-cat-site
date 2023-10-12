@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/49654d2d6c.js" crossorigin="anonymous"></script>
+    <title>Kattsidan</title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <h1 class="title">Kattsidan <i class="fa-solid fa-cat"></i></h1>
+            <ul class="menu">
+                <li><a class="menuItem active" href="#">Start</a></li>
+                <li><a class="menuItem" href="#">Katter</a></li>
+                <li><a class="menuItem" href="#">Om oss</a></li>
+                <li><a class="menuItem" href="#">Kontakt</a></li>
+            </ul>
+            <button class="hamburger">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="bigmenu">
+                <div class="links">
+                    <a class="BigmenuItem active" href="#">Start</a>
+                    <a class="BigmenuItem" href="#">Katter</a>
+                    <a class="BigmenuItem" href="#">Om oss</a>
+                    <a class="BigmenuItem" href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="section section1">
+                <div class="section1Text">
+                    <h2>Välkommen till vår kattsida</h2>
+                    <p>
+                        Här kan du upptäcka spännande fakta om katter och deras beteende.
+                        Utforska våra artiklar och bilder och lär dig mer om dessa
+                        underbara varelser.
+                    </p>
+                    <p>
+                        Om du älskar katter lika mycket som vi gör, varför inte gå med i
+                        vår kattklubb? Klicka på knappen nedan för att bli medlem!
+                    </p>
+                    <button class="button">Bli medlem <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="section1img">
+                    <img src="images/1.webp" alt="Katt 1" class="bild1" />
+                </div>
+            </div>
+            <div class="section">
+                <div class="section1Text">
+                    <h2>Våra Katter</h2>
+                    <p>
+                        Här kan du läsa om några av våra underbara katter och deras
+                        personligheter. Kolla in bilder på dem nedan.
+                    </p>
+                </div>
+                <div class="section1img">
+                    <img src="images/2.jpeg" alt="Katt 1" class="bild1 katt2" />
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section1Text">
+                    <h2>Kattbilder</h2>
+                    <p>
+                        Kolla in några söta kattbilder här. Du kan lägga till fler bilder
+                        nedan.
+                    </p>
+                </div>
+                <div class="catGrid">
+                    <div class="grid">
+                        <img src="images/3.webp" alt="Katt 3" />
+                    </div>
+                    <div class="grid">
+                        <img src="images/4.webp" alt="Katt 4" />
+                    </div>
+                    <div class="grid">
+                        <img src="images/5.webp" alt="Katt 5" />
+                    </div>
+                    <div class="grid">
+                        <img src="images/6.jpeg" alt="Katt 6" />
+                    </div>
+                    <div class="grid">
+                        <img src="images/7.jpeg" alt="Katt 7" />
+                    </div>
+                    <div class="grid">
+                        <img src="images/8.jpeg" alt="Katt 8" />
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section1Text">
+                    <h2>Om Oss</h2>
+                    <p>Lite information om vår kattklubb och vår kärlek till katter.</p>
+                    <p>
+                        Vi är en grupp kattälskare som älskar att dela vår passion för
+                        katter med andra. Vår kattklubb har funnits i flera år och vi är
+                        engagerade i att hjälpa katter och främja kattvård.
+                    </p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section1Text">
+                    <h2>Kontakt</h2>
+                    <p>
+                        Kontakta oss om du har frågor eller förslag. Vi älskar att höra från
+                        våra besökare.
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i> Du kan nå oss på följande telefonnummer: <a href="tel:000000"
+                            class="mail">123-123-123</a>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-envelope"></i> Du kan nå oss på följande e-postadress:
+                        <a href="mailto:kontakt@kattsidan.se" class="mail"></i> kontakt@kattsidan.se</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>&copy; 2023 Kattsidan</footer>
+</body>
+<script>
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".fa fa-bars");
+    const hamburger = document.querySelector(".hamburger");
+    const menuIcon = document.querySelector(".menuIcon");
+
+    function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            menuIcon.style.display = "block";
+        } else {
+            menu.classList.add("showMenu");
+            menuIcon.style.display = "none";
+        }
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    menuItems.forEach(
+        function (menuItem) {
+            menuItem.addEventListener("click", toggleMenu);
+        }
+    )
+</script>
+
+</html>

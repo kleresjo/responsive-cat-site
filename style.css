@@ -1,0 +1,246 @@
+:root {
+    --main-hover-color: rgb(149, 142, 146);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    margin-left: 20px;
+}
+
+.bigmenu {
+    display: none;
+}
+
+.menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #333;
+    color: white;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+.topnav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 99999;
+}
+
+.active {
+    color: var(--main-hover-color);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 10px;
+    width: 150px;
+    border: 1px transparent solid;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.section {
+    padding: 40px;
+    background-color: #f1f1f1;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.section1img .bild1 {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.section1 h2 {
+    font-size: 2.5rem;
+}
+
+.catGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: center;
+}
+
+.catGrid img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mail {
+    color: black;
+}
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+@media (min-width:600px) {
+
+    .bigmenu {
+        display: flex;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        margin-right: 50px;
+        font-size: 18px;
+        letter-spacing: 1.4px;
+    }
+
+    .BigmenuItem {
+        color: white;
+        text-decoration: none;
+
+    }
+
+    .BigmenuItem:hover {
+        color: var(--main-hover-color);
+        transition: 0.5s;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
+}
+
+@media (min-width:1025px) {
+
+    .title:hover {
+        color: var(--main-hover-color);
+        transition: 0.5s;
+    }
+
+    .button:hover {
+        border: 1px solid black;
+        background-color: transparent;
+        color: black;
+        scale: 1.05;
+        transition: 0.5s;
+    }
+
+    .button:hover>.fa-arrow-right {
+        position: absolute;
+        transition: ease-in;
+        transition: 1s;
+        margin-left: 50px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .section:hover {
+        border: solid var(--main-hover-color) 1px;
+        transition: 0.5s;
+    }
+
+    .section1 {
+        flex-direction: row;
+    }
+
+    .grid {
+        overflow: hidden;
+    }
+
+    .catGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+        overflow: hidden;
+    }
+
+    .catGrid img {
+        width: 100%;
+    }
+
+    .catGrid img:hover {
+        filter: grayscale(50%);
+        scale: 1.1;
+        transition: 1s;
+    }
+
+    .section1img .katt2 {
+        width: 50%;
+    }
+
+    .mail:hover {
+        color: var(--main-hover-color);
+        transition: 0.4s;
+    }
+}
